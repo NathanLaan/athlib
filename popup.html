@@ -3,6 +3,7 @@
 <title>AthLib</title>
 	<style>
 		body {
+      margin: 15px;
 		min-width:350px;
 		overflow-x:hidden;
 		}
@@ -74,11 +75,16 @@
 	</style>
 </head>
 <body>
+  <div id="title">
+    <h2>AthLib</h2>
+	</div>
 	<div id="popup">
         <select class="span6" id="browserPagesList" style="width:95%"></select>
         <br/><br/><a href="#" id="navButton" class="btn primary">Access via AU Library</a>
+        <a href="#" id="newWindowButton" class="btn primary">Access via AU Library - New Window</a>
 	</div>
 	<script src='jquery-1.6.1.min.js'></script>
-    <script src='popup.js'></script>
+  <script src='gcapilib-panels-v0.1.1.js'></script>
+  <script src='popup.js'></script>
 </body>
 </html>

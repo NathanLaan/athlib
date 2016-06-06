@@ -70,6 +70,20 @@ $(document).ready(function() {
         });
     });
 
+    $("#newWindowButton").click(function() {
+        var pageID = parseInt($('#browserPagesList').val());
+
+        chrome.tabs.get(pageID,function(tab) {
+            if(tab){            
+                var a = athlib_parseUrl(tab.url);
+                var u = "http://0-" + a.host + ".aupac.lib.athabascau.ca" + a.pathname + a.search;
+                //chrome.tabs.update(pageID, {url: u, active: true});
+                gcapilib_CreatePanel(u);
+            } else {
+            }
+        });
+    });
+
     athlib_loadPages();
 });
 
